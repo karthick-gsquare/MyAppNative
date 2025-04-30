@@ -1,14 +1,19 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/home/HomeScreen';
-
 
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => (
   <NavigationContainer>
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        headerStyle: {backgroundColor: '#0F70B5'},
+        headerTintColor: '#fff',
+        title: '',
+      }}>
       <Stack.Screen name="Home" component={HomeScreen} />
       {/* <Stack.Screen name="About" component={AboutScreen} />
       <Stack.Screen name="Profile" component={ProfileScreen} /> */}
