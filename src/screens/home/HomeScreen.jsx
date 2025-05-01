@@ -3,6 +3,7 @@ import React from 'react';
 import styles from '../../../StyleSheet';
 import Logo from '../../components/common/logo/Logo';
 import PhoneCard from '../../components/ui/cards/PhoneCard';
+import PhoneCall from '../../components/call/PhoneCall';
 
 const HomeScreen = () => {
   return (
@@ -11,8 +12,11 @@ const HomeScreen = () => {
       <Text style={styles.title}>Call History</Text>
       <View style={{marginTop: 24}}></View>
       <PhoneCard />
-      <View style={{marginTop:10}}>
+      <View style={{marginTop: 10}}>
         <CallButton />
+      </View>
+      <View style={{marginTop: 10}}>
+        <PhoneCall />
       </View>
     </View>
   );
